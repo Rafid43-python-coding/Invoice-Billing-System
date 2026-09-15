@@ -24,7 +24,7 @@ from accounts import views as account_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.HomePageView.as_view(), name='home'),
+    path('', views.HomePageView.as_view(), name='home'),
     path('invoices/', views.InvoiceListView.as_view(), name='all-invoices'),
     path('invoice/<int:pk>/', views.InvoiceDetailView.as_view(), name='invoice-detail'),
     path('invoice/new/', views.InvoiceCreateView.as_view(), name='invoice-create'),
